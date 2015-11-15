@@ -22,6 +22,9 @@ _.extend(HttpSubscription.prototype, {
     var self = this;
     
     check(collection, String);
+    if ( Match.test(id, Meteor.Collection.ObjectID) ) {
+      id = id + '';
+    }
     check(id, String);
 
     self._ensureCollectionInRes(collection);
@@ -34,6 +37,9 @@ _.extend(HttpSubscription.prototype, {
     var self = this;
 
     check(collection, String);
+    if ( Match.test(id, Meteor.Collection.ObjectID) ) {
+      id = id + '';
+    }
     check(id, String);
 
     self._ensureCollectionInRes(collection);
@@ -53,6 +59,9 @@ _.extend(HttpSubscription.prototype, {
     var self = this;
 
     check(collection, String);
+    if ( Match.test(id, Meteor.Collection.ObjectID) ) {
+      id = id + '';
+    }
     check(id, String);
 
     self._ensureCollectionInRes(collection);
